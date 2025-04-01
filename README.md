@@ -11,3 +11,5 @@ Navigate to the root of the project directory, and run the following commands.
 ```
 npm install && npm run dev
 ```
+
+API URL used in this example - https://rt-airlock-services-listing.herokuapp.com/featured-listings

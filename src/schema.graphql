@@ -9,9 +9,25 @@ type Listing {
   costPerNight: Float
   "Indicates whether listing is closed for bookings (on hiatus)"
   closedForBookings: Boolean
+  "Latitude of the listing"
+  latitude: Float
+  "Longitude of the listing"
+  longitude: Float
+  "The amenities available for this listing"
+  amenities: [Amenity!]!
+}
+
+type Amenity {
+  id: ID!
+  "The amenity category the amenity belongs to"
+  category: String!
+  "The amenity's name"
+  name: String!
 }
 
 type Query {
   "A curated array of listings to feature on the homepage"
   featuredListings: [Listing!]!
+  "Returns the details about this listing"
+  listing(id: ID!): Listing
 }

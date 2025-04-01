@@ -18,7 +18,7 @@
     "compile": "tsc && npm run copy-schema",
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "start": "npm run compile && nodemon ./dist/index.js",
-    "generate": "graphql-codegen",
+    "generate": "graphql-codegen && npm run compile",
     "test": "jest"
   },
   "dependencies": {
